@@ -1,9 +1,20 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+```
+<Anchor
+        href="/"
+        icon={<Image
+              src="/vercel.svg"
+              alt="Wavelength Logo"
+              width={100}
+              height={24}
+              priority
+            />
+        }
+        label="wavelength"
+      />
+```
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
+```
+<main className={styles.main}>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -91,5 +102,4 @@ export default function Home() {
         </a>
       </div>
     </main>
-  );
-}
+```

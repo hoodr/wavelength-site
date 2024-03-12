@@ -2,9 +2,15 @@
 
 # dependencies
 /node_modules
-/.pnp
 .pnp.js
 .yarn/install-state.gz
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # testing
 /coverage
@@ -19,6 +25,7 @@
 # misc
 .DS_Store
 *.pem
+/landing-example/
 
 # debug
 npm-debug.log*
