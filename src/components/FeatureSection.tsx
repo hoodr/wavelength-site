@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode } from "react";
 import {
   Anchor,
   Box,
@@ -15,7 +15,14 @@ import {
   Wifi,
 } from "grommet-icons";
 
-const FeatureContent = ({ action, children, name, summary, ...rest }) => (
+type Props = {
+  name: string
+  action: string
+  children: ReactNode
+  summary: ReactNode
+}
+
+const FeatureContent = ({ action, children, name, summary, ...rest }: Props) => (
   <Box align="center" margin="large" direction="row" {...rest}>
     <Stack anchor="center">
       <Box direction="row">

@@ -3,7 +3,8 @@ import type { AppProps } from "next/app";
 import { Grommet } from "grommet";
 import { grommet } from "grommet/themes";
 import { deepMerge } from "grommet/utils";
-
+import type { NextPage } from "next";
+import type { ReactElement, ReactNode } from "react";
 
 const theme = deepMerge(grommet, {
   global: {
@@ -36,11 +37,10 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const [darkMode, setDarkMode] = useState(false);
-  const getLayout = Component.getLayout ?? ((page) => page);
+  const getLayout = Component.getLayout ?? ((page: ReactElement) => page);
 
-  // <Component {...pageProps} />
   return (
     <Grommet theme={theme} themeMode={darkMode ? "dark" : "light"}>
       {getLayout(<Component {...pageProps} />)}

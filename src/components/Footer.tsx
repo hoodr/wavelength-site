@@ -62,7 +62,6 @@ export const SitemapFooter = () => {
                       alt="Wavelength Logo"
                       width={100}
                       height={48}
-                      priority
                     />
                 }
                 color="white"
@@ -82,7 +81,6 @@ export const SitemapFooter = () => {
                         alt="Wavelength Logo"
                         width={120}
                         height={72}
-                        priority
                       />}
                 color="white"
               />
@@ -120,7 +118,6 @@ export const Footer2 = ({ ...rest }) => {
                     src="/wavelength-logo-v0.0.2.png"
                     alt="Wavelength Logo"
                     height={72}
-                    priority
                   />}
             color="white"
           />
