@@ -10,7 +10,6 @@ const Logo = () => (
           alt="Wavelength Logo"
           //width={120}
           height={96}
-          priority
         />}
     color="white"
   />

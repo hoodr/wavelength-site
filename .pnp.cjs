@@ -30,6 +30,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.2.64"],\
           ["@types/react-dom", "npm:18.2.21"],\
           ["@types/react-is", "npm:18.2.4"],\
+          ["@types/styled-components", "npm:5.1.34"],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-next", "virtual:ebae755a3088b8914ef19113a3e0bdb2028b10972695320cfde7aec9dd048135c0e32391a5694a8cf97949dd21256b348c6ee7dae27c796993b9037a78207b48#npm:14.1.3"],\
           ["grommet", "virtual:ebae755a3088b8914ef19113a3e0bdb2028b10972695320cfde7aec9dd048135c0e32391a5694a8cf97949dd21256b348c6ee7dae27c796993b9037a78207b48#npm:2.35.0"],\
@@ -621,6 +622,17 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/hoist-non-react-statics", [\
+      ["npm:3.3.5", {\
+        "packageLocation": "../../.yarn/berry/cache/@types-hoist-non-react-statics-npm-3.3.5-98b8d8e47b-10c0.zip/node_modules/@types/hoist-non-react-statics/",\
+        "packageDependencies": [\
+          ["@types/hoist-non-react-statics", "npm:3.3.5"],\
+          ["@types/react", "npm:18.2.64"],\
+          ["hoist-non-react-statics", "npm:3.3.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/json5", [\
       ["npm:0.0.29", {\
         "packageLocation": "../../.yarn/berry/cache/@types-json5-npm-0.0.29-f63a7916bd-10c0.zip/node_modules/@types/json5/",\
@@ -686,6 +698,18 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/@types-scheduler-npm-0.16.8-303819b439-10c0.zip/node_modules/@types/scheduler/",\
         "packageDependencies": [\
           ["@types/scheduler", "npm:0.16.8"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/styled-components", [\
+      ["npm:5.1.34", {\
+        "packageLocation": "../../.yarn/berry/cache/@types-styled-components-npm-5.1.34-c1fd4bac77-10c0.zip/node_modules/@types/styled-components/",\
+        "packageDependencies": [\
+          ["@types/styled-components", "npm:5.1.34"],\
+          ["@types/hoist-non-react-statics", "npm:3.3.5"],\
+          ["@types/react", "npm:18.2.64"],\
+          ["csstype", "npm:3.1.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2409,7 +2433,7 @@ const RAW_RUNTIME_STATE =
           ["grommet", "virtual:ebae755a3088b8914ef19113a3e0bdb2028b10972695320cfde7aec9dd048135c0e32391a5694a8cf97949dd21256b348c6ee7dae27c796993b9037a78207b48#npm:2.35.0"],\
           ["@types/react", "npm:18.2.64"],\
           ["@types/react-dom", "npm:18.2.21"],\
-          ["@types/styled-components", null],\
+          ["@types/styled-components", "npm:5.1.34"],\
           ["grommet-icons", "virtual:ebae755a3088b8914ef19113a3e0bdb2028b10972695320cfde7aec9dd048135c0e32391a5694a8cf97949dd21256b348c6ee7dae27c796993b9037a78207b48#npm:4.12.0"],\
           ["hoist-non-react-statics", "npm:3.3.2"],\
           ["markdown-to-jsx", "virtual:5a8c692c7fa1c111644f48be8c7569c3cc8ba33ba39fe8176daed27c061220decc6b131e9349874f973beb64624977a371cfbd7d42c87184254e3d2b6d6155ce#npm:7.4.1"],\
@@ -2443,7 +2467,7 @@ const RAW_RUNTIME_STATE =
           ["grommet-icons", "virtual:ebae755a3088b8914ef19113a3e0bdb2028b10972695320cfde7aec9dd048135c0e32391a5694a8cf97949dd21256b348c6ee7dae27c796993b9037a78207b48#npm:4.12.0"],\
           ["@types/react", "npm:18.2.64"],\
           ["@types/react-dom", "npm:18.2.21"],\
-          ["@types/styled-components", null],\
+          ["@types/styled-components", "npm:5.1.34"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:ebae755a3088b8914ef19113a3e0bdb2028b10972695320cfde7aec9dd048135c0e32391a5694a8cf97949dd21256b348c6ee7dae27c796993b9037a78207b48#npm:18.2.0"],\
           ["styled-components", "virtual:ebae755a3088b8914ef19113a3e0bdb2028b10972695320cfde7aec9dd048135c0e32391a5694a8cf97949dd21256b348c6ee7dae27c796993b9037a78207b48#npm:5.3.11"]\
@@ -4275,6 +4299,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.2.64"],\
           ["@types/react-dom", "npm:18.2.21"],\
           ["@types/react-is", "npm:18.2.4"],\
+          ["@types/styled-components", "npm:5.1.34"],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-next", "virtual:ebae755a3088b8914ef19113a3e0bdb2028b10972695320cfde7aec9dd048135c0e32391a5694a8cf97949dd21256b348c6ee7dae27c796993b9037a78207b48#npm:14.1.3"],\
           ["grommet", "virtual:ebae755a3088b8914ef19113a3e0bdb2028b10972695320cfde7aec9dd048135c0e32391a5694a8cf97949dd21256b348c6ee7dae27c796993b9037a78207b48#npm:2.35.0"],\

@@ -1,6 +1,5 @@
-import React from "react";
-import { Anchor, Box, Paragraph } from "grommet";
-import { FeatureEmoji, isAppleProduct } from "../emojis";
+import { ReactNode } from "react";
+import { Anchor, Box, Paragraph, BoxExtendedProps } from "grommet";
 import { Beacon, Key, Webcam, Wifi } from "grommet-icons";
 
 const data = [
@@ -9,9 +8,13 @@ const data = [
   "Simple, secure, and easy to configure access control roles and rules"
 ];
 
-// const titleProps = {};
+type Props = BoxExtendedProps & {
+  action: string
+  children: ReactNode
+  summary: ReactNode
+}
 
-const Tile = ({ children, action, summary, ...rest }) => (
+const Tile = ({ children, action, summary, ...rest }: Props) => (
   <Box basis="medium" align="center" margin="medium">
     <Box height="xsmall" align="center" justify="center" {...rest}>
       {children}
