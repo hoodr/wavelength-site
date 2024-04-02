@@ -35,7 +35,7 @@ export const Features = ({ ...rest }) => (
     direction="row-responsive"
     justify="center"
     align="center"
-    margin={{ top: "xlarge" }}
+    //margin={{ top: "xlarge" }}
     background="background-contrast"
     {...rest}
   >

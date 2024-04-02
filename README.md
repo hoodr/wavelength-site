@@ -23,3 +23,6 @@ yarn build \
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
+
+https://nextjs.org/docs/architecture/nextjs-compiler#styled-components

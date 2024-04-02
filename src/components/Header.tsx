@@ -18,18 +18,25 @@ export const Header = () => {
   const size = useContext(ResponsiveContext);
 
   return (
-    <GrommetHeader margin="medium" height="xsmall" sticky="scrollup">
+    <GrommetHeader
+      pad="small"
+      background="background"
+      sticky="scrollup"
+    >
       <Anchor
         href="/"
-        icon={<Image
-              src="/wavelength-logo-v0.0.2.png"
-              alt="Wavelength Logo"
-              //width={120}
-              height={96}
-            />
-        }
+        // icon={}
         color="white"
-      />
+        margin={{ left: "small" }}
+      >
+        <Box height="xxsmall">
+          <Image
+            src="/wavelength-logo-v0.0.2.png"
+            alt="Wavelength Logo"
+            fill="vertical"
+          />
+        </Box>
+      </Anchor>
       {size === "small" ? (
         <Box justify="end">
           <Menu
@@ -38,8 +45,8 @@ export const Header = () => {
             icon={<MenuIcon color="brand" />}
             items={[
               {
-                label: <Box pad="small">Docs</Box>,
-                href: "/",
+                label: <Box pad="small">Request a Demo</Box>,
+                href: "#request-demo",
               },
               {
                 label: <Box pad="small">Blog</Box>,
@@ -51,7 +58,7 @@ export const Header = () => {
       ) : (
         <Box justify="end" direction="row" gap="medium">
           <Box direction="row" gap="small">
-            <Button label="Docs" href="/" />
+            <Button label="Request a Demo" href="#request-demo" />
             <Button label="Blog" href="/" />
           </Box>
         </Box>
