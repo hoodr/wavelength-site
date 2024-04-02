@@ -97,33 +97,45 @@ export const Footer2 = ({ ...rest }) => {
   const size = useContext(ResponsiveContext);
 
   return(
-    <Box
-      direction="row"
-      justify="between"
-      border={{ side: "top", color: "light-4" }}
-      pad={{ top: "xlarge" }}
-      {...rest}
-    >
-      <Box gap="large" align="start">
-        <Box
-          gap="small"
-          direction="row-responsive"
-          align="center"
-          pad={{ horizontal: "small" }}
-        >
-          {/* <Logo />*/}
-          <Anchor
-            href="/"
-            icon={<Image
-                    src="/wavelength-logo-v0.0.2.png"
-                    alt="Wavelength Logo"
-                    height={72}
-                  />}
-            color="white"
-          />
+    <Box>
+      <Box
+        direction="row"
+        justify="between"
+        border={{ side: "top", color: "light-4" }}
+        pad={{ top: "xlarge" }}
+        {...rest}
+      >
+        <Box gap="large" align="start">
+          <Box
+            gap="small"
+            direction="row-responsive"
+            align="center"
+            pad={{ horizontal: "small" }}
+          >
+            {/* <Logo />*/}
+            <Anchor
+              href="/"
+              icon={<Image
+                      src="/wavelength-logo-v0.0.2.png"
+                      alt="Wavelength Logo"
+                      height={72}
+                    />}
+              color="white"
+            />
+          </Box>
         </Box>
+        <FooterContent />
       </Box>
-      <FooterContent />
+      <Box
+        margin={{top: "medium" }}
+        direction="row"
+        justify="between"
+      >
+        <Text size="xsmall">©️  2024, Wavelength</Text>
+        <Text size="xsmall">
+          <Anchor href="http://haleycormierphoto.com">Photos ©️  Haley Cormier</Anchor>
+        </Text>
+      </Box>
     </Box>
   );
 };

@@ -22,9 +22,8 @@ type Props = {
   summary: ReactNode
 }
 
-const FeatureContent = ({ action, children, name, summary, ...rest }: Props) => (
-  <Box align="center" margin="large" direction="row" {...rest}>
-    <Stack anchor="center">
+/*
+<Stack anchor="center">
       <Box direction="row">
         <Box
           width="small"
@@ -36,7 +35,14 @@ const FeatureContent = ({ action, children, name, summary, ...rest }: Props) => 
       </Box>
       <Box>{children}</Box>
     </Stack>
-    <Box width="small">
+*/
+
+const FeatureContent = ({ action, children, name, summary, ...rest }: Props) => (
+  <Box align="center" margin="medium" direction="row" {...rest}>
+    <Stack anchor="center">
+      {children}
+    </Stack>
+    <Box width="small" margin={{ left: "small" }}>
       <Heading level={1} size="small" margin="none" overflowWrap="normal">
         {name}
       </Heading>
@@ -52,52 +58,88 @@ export const FeatureSection = ({ ...rest }) => (
     <Paragraph size="xlarge" textAlign="center">
       Although Wavelength is still in the prototype phase, the following features are core to the system
     </Paragraph>
-    <Box direction="row-responsive" align="center" margin="large" wrap={true} {...rest}>
+    <Box direction="row-responsive" align="center" margin="medium" wrap={true} {...rest}>
       <FeatureContent
         name="RFID and Phone as a key"
         summary="swipe up for up voting and down for down vote"
         action="gestures"
       >
-        <Beacon size="large" />
+        <Box
+          height="medium"
+          width="small"
+          round="medium"
+          background={{ image:"url(/test-feature-1.jpeg)", size: "cover" }}
+        />
+        <Beacon size="xlarge" color="white" />
       </FeatureContent>
       <FeatureContent
         name="Integrated video intercom"
         summary="quickly move back and forth through the queue"
         action="navigate"
       >
-        <Webcam size="large" />
+        <Box
+          height="medium"
+          width="small"
+          round="medium"
+          background={{ image:"url(/test-feature-2.jpeg)", size: "cover" }}
+        />
+        <Webcam size="xlarge" color="white" />
       </FeatureContent>
     </Box>
-    <Box direction="row-responsive" align="center" margin="large" {...rest}>
+    <Box direction="row-responsive" align="center" margin="medium" wrap={true} {...rest}>
       <FeatureContent
         name="Simple and secure access control and tenant management"
         summary="quickly move back and forth through the queue"
         action="navigate"
       >
-        <Key size="large" />
+        <Box
+          height="medium"
+          width="small"
+          round="medium"
+          background={{ image:"url(/test-feature-3.jpg)", size: "cover" }}
+        />
+        <Key size="xlarge" color="white" />
       </FeatureContent>
       <FeatureContent
         name="Ingress and egress audit logging"
         summary="All door action are logged and locally stored forever on your device"
         action="navigate"
       >
-        <CatalogOption size="large" />
+        <Box
+          height="medium"
+          width="small"
+          round="medium"
+          background={{ image:"url(/test-feature-4.jpg)", size: "cover" }}
+        />
+        <CatalogOption size="xlarge" color="white" />
       </FeatureContent>
     </Box>
-    <Box direction="row-responsive" align="center" margin="large" {...rest}>
+    <Box direction="row-responsive" align="center" margin="large" wrap={true} {...rest}>
       <FeatureContent
         name="Fully customizable network access"
         summary="Can be configued to operate wirelessly or wired and with or without network access"
         action="navigate"
       >
-        <Wifi size="large" />
+        <Box
+          height="medium"
+          width="small"
+          round="medium"
+          background={{ image:"url(/test-feature-5.jpeg)", size: "cover" }}
+        />
+        <Wifi size="xlarge" color="white" />
       </FeatureContent>
       <FeatureContent
         name="Sharable temporary access codes "
         summary="Create codes for deliveries, guests, or other service providers"
         action="navigate"
       >
-        <Accessibility size="large" />
+        <Box
+          height="medium"
+          width="small"
+          round="medium"
+          background={{ image:"url(/test-feature-6.jpeg)", size: "cover" }}
+        />
+        <Accessibility size="xlarge" color="white" />
       </FeatureContent>
     </Box>
   </Box>
