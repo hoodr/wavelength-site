@@ -64,7 +64,7 @@ export default function Home() {
         </Box>
         <Features />
         <FeatureSection />
-        {"undefined"!=typeof Tally ? <Form /> : <div></div>}
+        <Form />
       </Main>
       <Section width="xlarge">
         {/*<SitemapFooter />*/}

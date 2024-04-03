@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Box } from "grommet";
 
 export const Form = () => {
@@ -8,13 +9,11 @@ export const Form = () => {
         loading="lazy"
         width="100%"
         height="594"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0"
+        style={{border:0}}
         title="Request a Demo"
       >
       </iframe>
-      {Tally.loadEmbeds()}
+      {"undefined"!=typeof Tally && Tally.loadEmbeds()}
     </Box>
   );
 };
