@@ -4,20 +4,16 @@ import {
   Box,
   Text,
   Heading,
-  Image,
-  Paragraph,
 } from "grommet";
 import { Header } from "@/components/Header";
-import { SitemapFooter, Footer2 } from "@/components/Footer";
+import { Footer2 } from "@/components/Footer";
 import { Features } from "@/components/Features";
 import { Section } from "@/components/Section";
 import { FeatureSection } from "@/components/FeatureSection";
 import { Form } from "@/components/Form";
 
+// Upgrading your legacy intercom has never been easier
 
-// background="url(/landing_1.jpg)"
-
-// <Image src="/landing_1.jpg" alt="landing image" fill="horizontal" />
 export default function Home() {
   return (
     <Box>
@@ -31,7 +27,12 @@ export default function Home() {
           pad={{ horizontal: "small" }}
           background={{ image: "url(/landing-2.jpeg)", size: "cover"}}
         >
-          <Box direction="column" margin={{top: "large", bottom: "small"}}>
+          <Box
+            direction="column"
+            background={{color: "#111111", opacity: "medium"}}
+            round="medium"
+            margin={{top: "large", bottom: "small"}}
+          >
             <Heading
               size="medium"
               textAlign="center"
@@ -39,27 +40,30 @@ export default function Home() {
               margin={{top: "large"}}
               color="white"
             >
-              Bringing Modern Tech to 20th Century Homes
+              Bringing Modern Access Control to 20th Century Homes
             </Heading>
             <Heading textAlign="center" alignSelf="center" color="white" level="2">
-              Upgrading your legacy intercom has never been easier
+              Upgrading your building has never been easier
             </Heading>
           </Box>
           <Box margin={{ vertical: "large" }}>
-            <Box
-              round="large"
-              background={{ color: "brand", opacity: "strong" }}
-              pad={{ horizontal: "large", vertical: "small" }}
-            >
-              <Text
-                textAlign="center"
-                size="large"
-                weight="bold"
-                style={{ fontFamily: "monospace" }}
+            <Anchor href="#request-demo">
+              <Box
+                round="large"
+                background={{ color: "brand" }}
+                pad={{ horizontal: "large", vertical: "small" }}
               >
-                Request a Demo
-              </Text>
-            </Box>
+                <Text
+                  textAlign="center"
+                  size="large"
+                  weight="bold"
+                  style={{ fontFamily: "monospace" }}
+                  color="white"
+                >
+                  Request a Demo
+                </Text>
+              </Box>
+            </Anchor>
           </Box>
         </Box>
         <Features />

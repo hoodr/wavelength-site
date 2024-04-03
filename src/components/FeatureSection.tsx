@@ -8,10 +8,12 @@ import {
 } from "grommet";
 import {
   Accessibility,
-  Beacon,
   CatalogOption,
-  Key,
-  Webcam,
+  Cloud,
+  Info,
+  Integration,
+  Network,
+  Notification,
   Wifi,
 } from "grommet-icons";
 
@@ -20,6 +22,7 @@ type Props = {
   action: string
   children: ReactNode
   summary: ReactNode
+  backgroundUrl: string
 }
 
 /*
@@ -37,109 +40,112 @@ type Props = {
     </Stack>
 */
 
-const FeatureContent = ({ action, children, name, summary, ...rest }: Props) => (
+const FeatureContent = ({ action, children, name, summary, backgroundUrl, ...rest }: Props) => (
   <Box align="center" margin="medium" direction="row" {...rest}>
-    <Stack anchor="center">
+    <Stack anchor="center" margin="small">
+      <Box
+        height="small"
+        width="small"
+        round="medium"
+        background={{ image: `url(${backgroundUrl})`, size: "cover" }}
+      />
       {children}
     </Stack>
     <Box width="small" margin={{ left: "small" }}>
-      <Heading level={1} size="small" margin="none" overflowWrap="normal">
+      <Heading level={2} size="small" margin="none" overflowWrap="normal">
         {name}
       </Heading>
       <Paragraph>{summary}</Paragraph>
-      <Anchor href="/">{action}</Anchor>
+      {/*<Anchor href="/">{action}</Anchor>*/}
     </Box>
   </Box>
 );
 
 export const FeatureSection = ({ ...rest }) => (
   <Box align="center" pad="large">
-    <Heading size="large">Core Features</Heading>
+    <Heading size="large" margin={{ top: "medium", bottom: "small"}}>
+      Full Feature Set
+    </Heading>
     <Paragraph size="xlarge" textAlign="center">
-      Although Wavelength is still in the prototype phase, the following features are core to the system
+      Wavelength is still in the prototype phase, and some of the following features are still in development
     </Paragraph>
-    <Box direction="row-responsive" align="center" margin="medium" wrap={true} {...rest}>
+    <Box
+      direction="row-responsive"
+      align="center"
+      justify="center"
+      margin={{top: "medium"}}
+      wrap={true}
+      {...rest}
+    >
       <FeatureContent
-        name="RFID and Phone as a key"
-        summary="swipe up for up voting and down for down vote"
+        name="Standard Doorbell Functionality"
+        summary="Here at Wavelength we strive to do the basics well"
         action="gestures"
+        backgroundUrl="/test-feature-1.jpeg"
       >
-        <Box
-          height="medium"
-          width="small"
-          round="medium"
-          background={{ image:"url(/test-feature-1.jpeg)", size: "cover" }}
-        />
-        <Beacon size="xlarge" color="white" />
+        <Notification size="xlarge" color="white" />
       </FeatureContent>
       <FeatureContent
-        name="Integrated video intercom"
-        summary="quickly move back and forth through the queue"
+        name="AI Powered Tenant Managment"
+        summary="Reduce the burden of tenant management by letting Wavelength handle it"
         action="navigate"
+        backgroundUrl="/test-feature-2.jpeg"
       >
-        <Box
-          height="medium"
-          width="small"
-          round="medium"
-          background={{ image:"url(/test-feature-2.jpeg)", size: "cover" }}
-        />
-        <Webcam size="xlarge" color="white" />
+        <Info size="xlarge" color="white" />
       </FeatureContent>
     </Box>
-    <Box direction="row-responsive" align="center" margin="medium" wrap={true} {...rest}>
+    <Box direction="row-responsive" align="center" margin={{top: "medium"}} wrap={true} {...rest}>
       <FeatureContent
-        name="Simple and secure access control and tenant management"
-        summary="quickly move back and forth through the queue"
+        name="Fully Wireless Lock Network"
+        summary="Easily retrofit all your building's locks"
         action="navigate"
+        backgroundUrl="/test-feature-3.jpg"
       >
-        <Box
-          height="medium"
-          width="small"
-          round="medium"
-          background={{ image:"url(/test-feature-3.jpg)", size: "cover" }}
-        />
-        <Key size="xlarge" color="white" />
-      </FeatureContent>
-      <FeatureContent
-        name="Ingress and egress audit logging"
-        summary="All door action are logged and locally stored forever on your device"
-        action="navigate"
-      >
-        <Box
-          height="medium"
-          width="small"
-          round="medium"
-          background={{ image:"url(/test-feature-4.jpg)", size: "cover" }}
-        />
-        <CatalogOption size="xlarge" color="white" />
-      </FeatureContent>
-    </Box>
-    <Box direction="row-responsive" align="center" margin="large" wrap={true} {...rest}>
-      <FeatureContent
-        name="Fully customizable network access"
-        summary="Can be configued to operate wirelessly or wired and with or without network access"
-        action="navigate"
-      >
-        <Box
-          height="medium"
-          width="small"
-          round="medium"
-          background={{ image:"url(/test-feature-5.jpeg)", size: "cover" }}
-        />
         <Wifi size="xlarge" color="white" />
       </FeatureContent>
       <FeatureContent
-        name="Sharable temporary access codes "
+        name="Ingress and egress logging"
+        summary="All door action are logged and locally stored forever on your device"
+        action="navigate"
+        backgroundUrl="/test-feature-4.jpg"
+      >
+        <CatalogOption size="xlarge" color="white" />
+      </FeatureContent>
+    </Box>
+    <Box direction="row-responsive" align="center" margin={{top: "medium"}} wrap={true} {...rest}>
+      <FeatureContent
+        name="Customizable Network Access"
+        summary="Can be configued to operate wirelessly or wired and with or without network access"
+        action="navigate"
+        backgroundUrl="/test-feature-5.jpeg"
+      >
+        <Network size="xlarge" color="white" />
+      </FeatureContent>
+      <FeatureContent
+        name="Sharable Temporary Access Codes "
         summary="Create codes for deliveries, guests, or other service providers"
         action="navigate"
+        backgroundUrl="/test-feature-6.jpeg"
       >
-        <Box
-          height="medium"
-          width="small"
-          round="medium"
-          background={{ image:"url(/test-feature-6.jpeg)", size: "cover" }}
-        />
         <Accessibility size="xlarge" color="white" />
+      </FeatureContent>
+    </Box>
+    <Box direction="row-responsive" align="center" margin={{top: "medium"}} wrap={true} {...rest}>
+      <FeatureContent
+        name="Cloud Hosting Compatible"
+        summary="You get to choose where your data lives"
+        action="navigate"
+        backgroundUrl="/test-feature-7.jpeg"
+      >
+        <Cloud size="xlarge" color="white" />
+      </FeatureContent>
+      <FeatureContent
+        name="Seamless Integration"
+        summary="Wavelength is built to support 3rd party integrations like security systems or smart door locks"
+        action="navigate"
+        backgroundUrl="/test-feature-8.jpeg"
+      >
+        <Integration size="xlarge" color="white" />
       </FeatureContent>
     </Box>
   </Box>
