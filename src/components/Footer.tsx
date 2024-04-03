@@ -102,7 +102,7 @@ export const Footer2 = ({ ...rest }) => {
         direction="row"
         justify="between"
         border={{ side: "top", color: "light-4" }}
-        pad={{ top: "xlarge" }}
+        pad={{ top: "large" }}
         {...rest}
       >
         <Box gap="large" align="start">
